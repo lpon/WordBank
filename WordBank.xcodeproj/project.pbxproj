@@ -44,8 +44,8 @@
 		0A4A2C7F1F96B114007937C4 /* WordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		0A4A2C831F96B2AA007937C4 /* WordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableViewController.swift; sourceTree = "<group>"; };
 		0A4A2C851F96EDAF007937C4 /* SavedWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedWordViewController.swift; sourceTree = "<group>"; };
-		0AF71DF5200D3358000A8188 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		0AFFDAEC1F9C1D1600BFC3B4 /* OxfordAPIInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OxfordAPIInfo.txt; sourceTree = "<group>"; };
+		0AF71DF5200D3358000A8188 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Word.swift; path = ../../../../../../../../Development/WordBank/WordBank/Word.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFFDAEC1F9C1D1600BFC3B4 /* OxfordAPIInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OxfordAPIInfo.txt; path = /Users/Lia/Development/WordBank/WordBank/OxfordAPIInfo.txt; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +89,13 @@
 			children = (
 				0A4A2C571F967352007937C4 /* AppDelegate.swift */,
 				0A4A2C7F1F96B114007937C4 /* WordTableViewCell.swift */,
-				0AFFDAEC1F9C1D1600BFC3B4 /* OxfordAPIInfo.txt */,
 				0AF71DF5200D3358000A8188 /* Word.swift */,
 				0A4A2C851F96EDAF007937C4 /* SavedWordViewController.swift */,
 				0A4A2C831F96B2AA007937C4 /* WordTableViewController.swift */,
 				0A4A2C591F967352007937C4 /* WordViewController.swift */,
 				0A4A2C5B1F967352007937C4 /* Main.storyboard */,
 				0A4A2C5E1F967352007937C4 /* Assets.xcassets */,
+				0AFFDAEC1F9C1D1600BFC3B4 /* OxfordAPIInfo.txt */,
 				0A4A2C601F967352007937C4 /* LaunchScreen.storyboard */,
 				0A4A2C631F967352007937C4 /* Info.plist */,
 			);

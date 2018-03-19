@@ -29,9 +29,20 @@ class WordTableViewController: UITableViewController, UISearchBarDelegate, UISea
         }
         else {
             let hello = Word(name: "Hello")
-            hello.setDefinition()
             let world = Word(name: "World")
-            world.setDefinition()
+            do {
+                try hello.setDefinition()
+            } catch {
+                hello.definition = "Cannot access Oxford Dictionary API"
+            }
+            
+            do {
+                try world.setDefinition()
+            } catch {
+                world.definition = "Cannot access Oxford Dictionary API"
+            }
+            
+            
             
             loadSampleWords(samples: [hello, world])
         }
