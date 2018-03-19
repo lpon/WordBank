@@ -63,7 +63,11 @@ class WordViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     func textFieldDidEndEditing(_ textField: UITextField) {
         word = Word(name: textField.text!.capitalized.trimmingCharacters(in: .whitespacesAndNewlines))
         
-        word?.setDefinition(textView: definitionTextView)
+        do {
+            try word?.setDefinition(textView: definitionTextView)
+        } catch {
+            word?.definition = "Cannot access Oxford Dictionary API"
+        }
         
         wordTextField.text = word?.name
         definitionTextView.text = word?.definition

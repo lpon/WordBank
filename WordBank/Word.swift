@@ -35,27 +35,29 @@ class Word: NSObject, NSCoding {
     
     // MARK: Private methods
     
-    func setDefinition(textView: UITextView? = nil) {
+    enum DefinitionError: Error {
+        case NoKeyNoIdAvaliable
+    }
+    
+    func setDefinition(textView: UITextView? = nil) throws {
         var newDeff: String = ""
         
-        
-        let path = "/Users/Lia/Development/WordBank/WordBank/OxfordAPIInfo.txt"
-        
+        let path = Bundle.main.path(forResource: "OxfordAPIInfo", ofType: "txt")
         
         var key = ""
         var  id = ""
         
         do {
             // Get the contents
-            let contents = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+            let contents = try NSString(contentsOfFile: path!, encoding: String.Encoding.utf8.rawValue)
             let arr = contents.components(separatedBy: " ")
             id = arr[0].trimmingCharacters(in: .whitespacesAndNewlines)
             key = arr[1].trimmingCharacters(in: .whitespacesAndNewlines)
         }
         catch let error as NSError {
             print("Ooops! let path = (NSTemp... did not work: \(error)")
+            throw DefinitionError.NoKeyNoIdAvaliable
         }
-        
         
         let appId = id
         let appKey = key
@@ -71,7 +73,7 @@ class Word: NSObject, NSCoding {
         
         let session = URLSession.shared
         _ = session.dataTask(with: request, completionHandler: { data, response, error in
-            if let response = response,
+            if let _ = response,
                 let data = data,
                 let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
 
@@ -153,7 +155,13 @@ class Word: NSObject, NSCoding {
             return nil
         }
         self.init(name: name)
-        setDefinition()
+        
+        do {
+            try setDefinition()
+        }
+        catch {
+            self.definition = "Cannot access the Oxford Dictionary API"
+        }
     }
     
     

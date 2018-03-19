@@ -1,4 +1,3 @@
-
 //
 //  WordTableViewCell.swift
 //  WordBank
