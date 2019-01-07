@@ -1,5 +1,5 @@
 # WordBank
-An dictionary-styled app that helps streamline the process of discovering, defining, and learning new words. 
+A dictionary-styled app that helps streamline the process of discovering, defining, and learning new words. 
 
 # Important Notes
 This project requires a new user to create the file, OxfordAPIInfo.txt 
